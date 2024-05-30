@@ -22,5 +22,5 @@ public class Patient {
     @Column(name = "direccionPaciente")
     private String direccionPaciente;
     @Column(name = "fechaNacimientoPaciente")
-    private Date fechaNacimientoPaciente;
+    private String fechaNacimientoPaciente;
 }
