@@ -3,7 +3,6 @@ package com.medes.patient.domain.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.util.Date;
 
 @Entity
 @Data
