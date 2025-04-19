@@ -18,7 +18,7 @@ import java.util.Optional;
 @AllArgsConstructor
 @RestController
 @RequestMapping("/api/v1/patient")
-@CrossOrigin(origins = {"http://localhost:5173","https://medes-frontend-production.up.railway.app/"})
+@CrossOrigin(origins = "http://localhost:5173")
 public class PatientController {
     private final PatientService patientService;
 
