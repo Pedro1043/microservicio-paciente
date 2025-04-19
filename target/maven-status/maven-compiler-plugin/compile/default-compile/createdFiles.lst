@@ -1,6 +1,0 @@
-com\medes\patient\api\PatientController.class
-com\medes\patient\domain\entity\Patient.class
-com\medes\patient\domain\service\PatientService.class
-com\medes\patient\domain\repository\PatientRepository.class
-com\medes\patient\PatientApplication.class
-com\medes\patient\service\PatientServiceImpl.class
