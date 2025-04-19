@@ -2,7 +2,9 @@ package com.medes.patient.domain.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
 @Table(name = "patients")
@@ -31,4 +33,9 @@ public class Patient {
     private String emailPaciente;
     @Column(name = "antecedenteFamiliarPaciente")
     private String antecedenteFamiliarPaciente;
+
+    // Relacióon uno-a-muchos con MedicalData
+    @OneToMany(mappedBy = "patient", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonManagedReference // Indica que esta es la parte "gestionada" de la relación
+    private List<MedicalData> medicalDataList;
 }
