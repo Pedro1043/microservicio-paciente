@@ -38,4 +38,14 @@ public class MedicalDataController {
         medicalDataService.delete(id);
         return ResponseEntity.noContent().build();
     }
+
+    // Nuevo endpoint para obtener datos médicos por idPaciente
+    @GetMapping("/patient/{idPaciente}")
+    public ResponseEntity<List<MedicalData>> fetchByPatientId(@PathVariable Long idPaciente) {
+        List<MedicalData> medicalDataList = medicalDataService.getByPatientId(idPaciente);
+        if (medicalDataList.isEmpty()) {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok(medicalDataList);
+    }
 }

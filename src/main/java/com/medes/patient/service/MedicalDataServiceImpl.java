@@ -33,4 +33,9 @@ public class MedicalDataServiceImpl implements MedicalDataService {
     public void delete(Long id) {
         medicalDataRepository.deleteById(id);
     }
+
+    @Override
+    public List<MedicalData> getByPatientId(Long idPaciente) {
+        return medicalDataRepository.findByPatientIdPaciente(idPaciente); 
+    }
 }

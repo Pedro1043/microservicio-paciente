@@ -13,4 +13,6 @@ public interface MedicalDataService {
     MedicalData save(MedicalData medicalData);
 
     void delete(Long id);
+
+    List<MedicalData> getByPatientId(Long idPaciente);
 }
