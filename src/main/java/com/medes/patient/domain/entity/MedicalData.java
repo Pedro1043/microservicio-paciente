@@ -52,5 +52,5 @@ public class MedicalData {
     private String signosSintomasPrincipales;
 
     @Column(name = "relato_cronologico", nullable = false, length = 1000)
-    private String relatoCronologico;    
+    private String relatoCronologico;
 }
