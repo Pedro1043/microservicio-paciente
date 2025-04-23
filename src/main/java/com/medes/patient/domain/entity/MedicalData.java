@@ -41,4 +41,16 @@ public class MedicalData {
 
     @Column(name = "temperatura", nullable = false)
     private double temperatura;
+
+    @Column(name = "examen_clinico_general", nullable = false, length = 500)
+    private String examenClinicoGeneral;
+
+    @Column(name = "tiempo_enfermedad", nullable = false, length = 100)
+    private String tiempoEnfermedad;
+
+    @Column(name = "signos_sintomas_principales", nullable = false, length = 500)
+    private String signosSintomasPrincipales;
+
+    @Column(name = "relato_cronologico", nullable = false, length = 1000)
+    private String relatoCronologico;    
 }
